@@ -46,7 +46,7 @@ class EncounterXPCalc:
 
         if encounter_count == 1:
             encounter_multiplier = multiplier[multiplier_idx]
-        elif encounter_count == 2.0:
+        elif encounter_count == 2:
             encounter_multiplier = multiplier[multiplier_idx+1]
         elif encounter_count >= 3 and encounter_count <= 6:
             encounter_multiplier = multiplier[multiplier_idx+2]

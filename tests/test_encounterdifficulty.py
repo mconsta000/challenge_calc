@@ -2,11 +2,13 @@ import unittest
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(0, os.path.abspath(
+    os.path.join(os.path.dirname(__file__), '..')))
 
 from calc.challenge_calc import XPThresholdCalc
 from calc.challenge_calc import EncounterXPCalc
 from calc.challenge_calc import EncounterDifficultyCalc
+
 
 class CalcTestCase(unittest.TestCase):
     def setUp(self):
@@ -26,6 +28,7 @@ class CalcTestCase(unittest.TestCase):
         self.encounter.add_encounter_xp(1000)
 
         self.assertEqual(self.difficulty.calculate_difficulty(), "Hard")
+
 
 if __name__ == '__main__':
     unittest.main()

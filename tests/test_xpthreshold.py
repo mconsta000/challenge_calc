@@ -19,14 +19,22 @@ class CalcTestCase(unittest.TestCase):
     def tearDown(self):
         self.calculator = None
 
-    def test_party_xp_threshold(self):
+    def test_party_xp_threshold1(self):
         self.calculator.add_party_level(3)
         self.calculator.add_party_level(3)
         self.calculator.add_party_level(3)
         self.calculator.add_party_level(2)
 
         self.assertEqual(self.calculator.calcuate_party_xp_threshold(), [
-                         275, 550, 825, 1400], "Woot!")
+                         275, 550, 825, 1400])
+
+    def test_party_xp_threshold2(self):
+        self.calculator.add_party_level(10)
+        self.calculator.add_party_level(11)
+        self.calculator.add_party_level(12)
+
+        self.assertEqual(self.calculator.calcuate_party_xp_threshold(), [
+                         2400, 4800, 7300, 10900])
 
 
 if __name__ == '__main__':

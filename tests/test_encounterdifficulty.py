@@ -85,5 +85,18 @@ class CalcTestCase(unittest.TestCase):
 
         self.assertEqual(self.difficulty.calculate_difficulty(), "Medium")
 
+    def test_party_xp_threshold8(self):
+        self.party.add_party_level(1)
+        self.party.add_party_level(1)
+        self.party.add_party_level(2)
+        self.party.add_party_level(2)
+
+        self.encounter.add_encounter_xp(10)
+        self.encounter.add_encounter_xp(10)
+        self.encounter.add_encounter_xp(10)
+        self.encounter.add_encounter_xp(10)
+
+        self.assertEqual(self.difficulty.calculate_difficulty(), "Easy")
+
 if __name__ == '__main__':
     unittest.main()

@@ -14,6 +14,13 @@ class EncounterXPCalc:
         self.encounter_xp.append(encounter_xp)
         pass
 
+    def remove_encounter_xp(self, encounter_xp: int):
+        """Remove difficulty from the existing list"""
+
+        if encounter_xp in self.encounter_xp:
+            self.encounter_xp.remove(encounter_xp)
+        pass
+
     def calcualte_adjusted_xp(self, party_size: int=5) -> int:
         """Calculates the adjusted xp based on the challenging party 
         sizze"""
@@ -76,6 +83,13 @@ class XPThresholdCalc:
         self.party_levels.append(character_level)
         pass
 
+    def remove_party_level(self, character_level: int):
+        """Remove part level from existing list"""
+
+        if character_level in self.party_levels:
+            self.party_levels.remove(character_level)
+        pass
+
     def calcuate_party_xp_threshold(self) -> [int]:
         """Calculate the party xp threshold as an array of 4 integers"""
 
@@ -111,7 +125,7 @@ class EncounterDifficultyCalc:
         encounter_xp = \
             self.encounter_xp_calc.calcualte_adjusted_xp(
                 len(self.xp_threshold_calc.party_levels))
-        encounter_difficulty = "Unknown"
+        encounter_difficulty = self.difficulty[0]
 
         for i, threshold in reversed(list(enumerate(xp_threshold))):
             if threshold <= encounter_xp:

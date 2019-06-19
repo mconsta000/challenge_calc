@@ -15,7 +15,7 @@ def main():
                 xp_threshold.add_party_level(int(command[2]))
                 pass
             elif command[1] == "remove":
-                xp_threshold.party_levels.remove(int(command[2]))
+                xp_threshold.remove_party_level(int(command[2]))
                 pass
             elif command[1] == "list":
                 print(xp_threshold.party_levels)
@@ -28,7 +28,7 @@ def main():
                 xp_encounter.add_encounter_xp(int(command[2]))
                 pass
             elif command[1] == "remove":
-                xp_encounter.encounter_xp.remove(int(command[2]))
+                xp_encounter.remove_encounter_xp(int(command[2]))
                 pass
             elif command[1] == "list":
                 print(xp_encounter.encounter_xp)

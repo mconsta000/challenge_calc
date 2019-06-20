@@ -22,7 +22,7 @@ adds a character level to the calculation
 
 #### party remove <level>
 
-removes a character level from the calculationp
+removes a character level from the calculation
 
 #### party list
 

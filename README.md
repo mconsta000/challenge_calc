@@ -18,11 +18,11 @@ party commands are used to define the character levels for the adventuring party
 
 #### party add <level>
 
-adds a character level to the party
+adds a character level to the calculation
 
 #### party remove <level>
 
-removes a character level from the party
+removes a character level from the calculationp
 
 #### party list
 
@@ -30,7 +30,7 @@ display the list of entered character levels
 
 ### foe
 
-foes represent the opposing party and are represented by adding the xp level of the individual foe to the calculation
+foes represent the opposing party and are added by entering the xp level of the individual foe to the calculation
 
 #### foe add <xp>
 
@@ -51,3 +51,5 @@ calcuates the challenge level for an encounter based on party and foe enties
 ## testing
 
 python -m  unittest discover -s tests
+
+Development and testing was completed with python 3.6.4 64-bit

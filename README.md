@@ -12,15 +12,15 @@ starting the main.py entry program starts the interpreter the following commands
 
 party commands are used to define the character levels for the adventuring party.  character levels are 1 - 20
 
->> party add [level]
+> party add [level]
 
 adds a character level to the calculation
 
->> party remove [level]
+> party remove [level]
 
 removes a character level from the calculation
 
->> party list
+> party list
 
 display the list of entered character levels
 
@@ -28,23 +28,23 @@ display the list of entered character levels
 
 foes represent the opposing party and are added by entering the xp level of the individual foe to the calculation
 
->> foe add [xp]
+> foe add [xp]
 
 adds a foes xp to the challenge calculation
 
->> foe remove [xp]
+> foe remove [xp]
 
 removes the foes xp from the challenge calculation
 
->> foe list
+> foe list
 
 lists xp of foes in calculation
 
 ### challenge
 
->> challenge
+> challenge
 
-calculates the challenge level for an encounter based on party and foe enties
+calculates the challenge level for an encounter based on party and foe entries
 
 ## testing
 

@@ -8,7 +8,7 @@ run the main module with
 
 > python main.py
 
-starting the main.py entry program starts the interpreter the following commands are recognized
+starting the main.py entry program starts the interpreter. the following commands are recognized
 
 ### party
 

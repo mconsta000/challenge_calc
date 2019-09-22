@@ -1,6 +1,6 @@
-from calc.challenge_calc import EncounterDifficultyCalc
-from calc.challenge_calc import XPThresholdCalc
-from calc.challenge_calc import EncounterXPCalc
+from challenge.calc import EncounterDifficultyCalc
+from challenge.calc import XPThresholdCalc
+from challenge.calc import EncounterXPCalc
 
 def main():
     xp_threshold = XPThresholdCalc()

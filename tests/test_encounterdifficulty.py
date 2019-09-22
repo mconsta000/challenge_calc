@@ -5,9 +5,9 @@ import sys
 sys.path.insert(0, os.path.abspath(
     os.path.join(os.path.dirname(__file__), '..')))
 
-from calc.challenge_calc import XPThresholdCalc
-from calc.challenge_calc import EncounterXPCalc
-from calc.challenge_calc import EncounterDifficultyCalc
+from challenge.calc import XPThresholdCalc
+from challenge.calc import EncounterXPCalc
+from challenge.calc import EncounterDifficultyCalc
 
 
 class CalcTestCase(unittest.TestCase):

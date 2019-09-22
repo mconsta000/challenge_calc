@@ -1,6 +1,6 @@
 # challenge_calc
 
-challenge_calc is python utility project used to calculate encounter difficulty using D&D 5e rules.  The driver program main.py is a basic command interpreter for the calculation classes in the calc.challenge_calc.py module
+challenge_calc is python utility project used to calculate encounter difficulty using D&D 5e rules.  The driver program main.py is a basic command interpreter for the calculation classes in the challenge.calc.py module
 
 ## running
 

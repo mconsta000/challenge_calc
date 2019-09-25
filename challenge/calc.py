@@ -1,5 +1,5 @@
 import csv
-
+import pkg_resources
 
 class EncounterXPCalc:
     """Calculate the adjusted encounter xp"""
@@ -69,11 +69,15 @@ class XPThresholdCalc:
         self.thresholds = {}
 
         # TODO: make thresholds map a class variable
-        with open("resource/xp_threshold.csv") as thresholds:
-            reader = csv.reader(thresholds, delimiter=',')
-            for row in reader:
-                ints = [int(element) for element in row]
-                self.thresholds[ints[0]] = ints[1:]
+        thresholds = pkg_resources \
+            .resource_string(__name__, '/'.join(('resource','xp_threshold.csv'))) \
+            .decode('utf-8')
+
+#        with open("resource/xp_threshold.csv") as thresholds:
+        reader = csv.reader(thresholds.splitlines(), delimiter=',')
+        for row in reader:
+            ints = [int(element) for element in row]
+            self.thresholds[ints[0]] = ints[1:]
 
         pass
 

@@ -21,6 +21,10 @@ class EncounterXPCalc:
             self.encounter_xp.remove(encounter_xp)
         pass
 
+    def reset(self):
+        """Remove all xp"""
+        self.encounter_xp.clear()
+
     def calcualte_adjusted_xp(self, party_size: int=5) -> int:
         """Calculates the adjusted xp based on the challenging party 
         sizze"""
@@ -73,7 +77,6 @@ class XPThresholdCalc:
             .resource_string(__name__, '/'.join(('resource','xp_threshold.csv'))) \
             .decode('utf-8')
 
-#        with open("resource/xp_threshold.csv") as thresholds:
         reader = csv.reader(thresholds.splitlines(), delimiter=',')
         for row in reader:
             ints = [int(element) for element in row]
@@ -93,6 +96,10 @@ class XPThresholdCalc:
         if character_level in self.party_levels:
             self.party_levels.remove(character_level)
         pass
+
+    def reset(self):
+        """Remove all party levels"""
+        self.party_levels.clear()
 
     def calcuate_party_xp_threshold(self) -> [int]:
         """Calculate the party xp threshold as an array of 4 integers"""

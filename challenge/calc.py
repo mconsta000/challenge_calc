@@ -27,7 +27,7 @@ class EncounterXPCalc:
 
     def calcualte_adjusted_xp(self, party_size: int=5) -> int:
         """Calculates the adjusted xp based on the challenging party 
-        sizze"""
+        size"""
 
         encounter_multiplier = 0
         adjusted_xp = 0

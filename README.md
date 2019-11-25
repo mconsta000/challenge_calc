@@ -4,7 +4,7 @@ challenge_calc is python utility project used to calculate encounter difficulty 
 
 ## running
 
-run the main module with 
+run the main module with
 
 > python main.py
 

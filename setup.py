@@ -2,8 +2,8 @@ from distutils.core import setup
 
 setup(
     name='challenge-calc',
-    version='master',
+    version='v0.1',
     packages=['challenge',],
     license='Creative Commons Attribution-Noncommercial-Share Alike license',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
 )

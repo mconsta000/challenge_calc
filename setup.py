@@ -1,9 +1,12 @@
-from distutils.core import setup
+import setuptools
 
-setup(
+setuptools.setup(
     name='challenge-calc',
-    version='v0.1',
-    packages=['challenge',],
+    version='0.1.0',
+    author="mconsta000",
+    packages=setuptools.find_packages(),
     license='Creative Commons Attribution-Noncommercial-Share Alike license',
     long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
+    python_requires='>=3.6',
 )

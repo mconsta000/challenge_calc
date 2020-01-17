@@ -8,8 +8,14 @@ setuptools.setup(
     version='0.1.0',
     author="mconsta000",
     packages=setuptools.find_packages(),
-    license='Creative Commons Attribution-Noncommercial-Share Alike license',
+    license='MIT',
     long_description=long_description,
     long_description_content_type="text/markdown",
+    url="",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
     python_requires='>=3.6',
 )

@@ -4,7 +4,6 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    include_package_data=True,
     name='challenge-calc',
     version='0.1.0',
     author="mconsta000",
@@ -23,5 +22,8 @@ setuptools.setup(
         "Intended Audience :: Developers",
         "Topic :: Utilities",
     ],
+    package_data= {
+        "": ["*.csv"],
+    },
     python_requires='>=3.6',
 )

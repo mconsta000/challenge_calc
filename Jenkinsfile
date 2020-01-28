@@ -4,7 +4,6 @@ pipeline {
    stages {
       stage('Unit Test') {
          steps {
-            // git 'https://github.com/mconsta000/challenge_calc.git'
             sh "python3 -m  unittest discover -s tests"
          }
       }

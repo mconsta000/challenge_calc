@@ -10,7 +10,7 @@ pipeline {
       
       stage('Package') {
         steps {
-           sh 'rm dist/*' || true
+           sh 'rm dist/*'
            sh "python3 setup.py sdist bdist_wheel"
            archiveArtifacts artifacts: 'dist/**', onlyIfSuccessful: true
         }

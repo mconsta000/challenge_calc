@@ -10,8 +10,10 @@ pipeline {
       
       stage('Package') {
         steps {
-           sh 'rm dist/*'
-           sh "python3 setup.py sdist bdist_wheel"
+           dir('dist') {
+               deleteDir()
+           }
+           sh 'python3 setup.py sdist bdist_wheel'
            archiveArtifacts artifacts: 'dist/**', onlyIfSuccessful: true
         }
       }
